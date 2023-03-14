@@ -3,30 +3,40 @@ const router = express.Router();
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const crypto = require('crypto');
-// const db = require('../../db/db');
+const { User } = require('../../models');
 
-passport.use(new LocalStrategy(function verify(username, password, cb) {
-    db.get('SELECT * FROM users WHERE username = ?', [username], function(err, row) {
-        if (err) {
-            return cb(err);
-        }
+passport.use(new LocalStrategy(async function (username, password, done) {
+    let user;
 
-        if (!row) {
-            return cb(null, false, { message: 'Incorrect username or password'});
-        };
-
-        crypto.pbkdf2(password, row.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
-            if (err) {
-                return cb(err);
+    try {
+        user = await User.findOne({
+            where: {
+                username
             }
-
-            if (!crypto.timingSafeEqual(row.hashed_password, hashedPassword)) {
-                return cb(null, false, { message: 'Incorrect username or password'});
-            }
-
-            return cb(null, row);
         });
-    });
+    } catch (err) {
+       console.error(err);
+       return done(err);
+    }
+    
+    if (!user) {
+        return done(null, false, { message: 'Incorrect username or password'});
+    }
+
+    console.log(user);
+    
+
+    // crypto.pbkdf2(password, row.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
+    //     if (err) {
+    //         return cb(err);
+    //     }
+
+    //     if (!crypto.timingSafeEqual(row.hashed_password, hashedPassword)) {
+    //         return cb(null, false, { message: 'Incorrect username or password'});
+    //     }
+
+    //     return cb(null, row);
+    // });
 }));
 
 router.get('/login', async (req, res) => {
