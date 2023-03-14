@@ -32,10 +32,12 @@
   
     "users": [
       {
+        "email": "aFunnyOne@gmail.com",
         "username": "johndoe",
         "password": "password123"
       },
       {
+        "email": "aDumbOne@gmail.com",
         "username": "janedoe",
         "password": "password456"
       }
