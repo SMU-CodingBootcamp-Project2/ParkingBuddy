@@ -1,5 +1,5 @@
 {
-  "name": "fithub",
+  "name": "parkingbuddy",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,21 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SMU-CodingBootcamp-Project2/FitHub.git"
+    "url": "git+https://github.com/SMU-CodingBootcamp-Project2/ParkingBuddy.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SMU-CodingBootcamp-Project2/FitHub/issues"
+    "url": "https://github.com/SMU-CodingBootcamp-Project2/ParkingBuddy/issues"
   },
-  "homepage": "https://github.com/SMU-CodingBootcamp-Project2/FitHub#readme",
+  "homepage": "https://github.com/SMU-CodingBootcamp-Project2/ParkingBuddy#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "7.0.2",
     "mysql2": "3.2.0",
     "sequelize": "6.29.2",
     "dotenv": "16.0.3",
-    "connect-session-sequelize": "7.1.5"
+    "connect-session-sequelize": "7.1.5",
+    "passport": "0.6.0",
+    "passport-local": "1.0.0"
   }
 }
