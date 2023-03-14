@@ -14,33 +14,40 @@ Resident.init(
     first_name: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: '',
     },
     last_name: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: '',
     },
     license_plate: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: '',
     },
     car_make: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: '',
     },
     car_model: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: '',
     },
     apartment_number: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 500,
     },
     spot_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+         defaultValue: 1,
         references: {
          model: 'lot',
-         key: 'id'
+         key: 'id',
         },
     },
   },

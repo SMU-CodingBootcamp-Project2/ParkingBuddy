@@ -14,14 +14,17 @@ Lot.init(
         total_parking: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 100,
         },
         resident_spots: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 60,
         },
         guest_spots: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 40,
         },
     },
     {
