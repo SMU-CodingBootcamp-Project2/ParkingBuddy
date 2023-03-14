@@ -1,6 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers')
+const routes = require('./controllers');
+const passport = require('passport');
 
 const sequelize = require('./config/connection');
 
@@ -12,8 +13,9 @@ const hbs = exphbs.create();
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.use(passport.initialize())
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 app.use(routes);
 
