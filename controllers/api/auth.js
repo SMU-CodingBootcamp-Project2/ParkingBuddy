@@ -5,39 +5,19 @@ const LocalStrategy = require('passport-local');
 const crypto = require('crypto');
 const { User } = require('../../models');
 
-passport.use(new LocalStrategy(async function (username, password, done) {
-    let user;
-
+passport.use(new LocalStrategy.Strategy({}, async (username, password, done) => {
     try {
-        user = await User.findOne({
+        const user = await User.findOne({
             where: {
-                username
+                username: username
             }
-        });
-    } catch (err) {
-       console.error(err);
-       return done(err);
+        })
+        console.log(user);
+    } catch (error) {
+        done(error);
     }
-    
-    if (!user) {
-        return done(null, false, { message: 'Incorrect username or password'});
-    }
-
-    console.log(user);
-    
-
-    // crypto.pbkdf2(password, row.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
-    //     if (err) {
-    //         return cb(err);
-    //     }
-
-    //     if (!crypto.timingSafeEqual(row.hashed_password, hashedPassword)) {
-    //         return cb(null, false, { message: 'Incorrect username or password'});
-    //     }
-
-    //     return cb(null, row);
-    // });
 }));
+
 
 router.get('/login', async (req, res) => {
     res.render('login');
