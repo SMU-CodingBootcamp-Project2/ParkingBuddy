@@ -1,0 +1,44 @@
+{
+    "lots": [
+      {
+        "totalSpots": 100,
+        "assignedResidentSpots": 60,
+        "availableGuestSpots": 40
+      }
+    ],
+  
+    "residents": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "vehicleLicensePlate": "ABC123",
+        "carMake": "Toyota",
+        "carModel": "Camry",
+        "apartmentNumber": "101",
+        "assignedSpots": 2,
+        "lot_id": 1
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "vehicleLicensePlate": "DEF456",
+        "carMake": "Honda",
+        "carModel": "Accord",
+        "apartmentNumber": "102",
+        "assignedSpots": 1,
+        "lot_id": 1
+      }
+    ],
+  
+    "users": [
+      {
+        "username": "johndoe",
+        "password": "password123"
+      },
+      {
+        "username": "janedoe",
+        "password": "password456"
+      }
+    ]
+  }
+  
