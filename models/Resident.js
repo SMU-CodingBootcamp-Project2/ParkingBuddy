@@ -36,6 +36,11 @@ Resident.init(
         allowNull: false,
         defaultValue: '',
     },
+    car_color: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: 'Yellow',
+    },
     apartment_number: {
         type: DataTypes.INTEGER,
         allowNull: false,
