@@ -19,7 +19,7 @@ router.post('/createaccount', async (req, res) => {
         req.session.save(() => {
             req.session.loggedIn = true;
 
-            res.status(200).json(userData, residentData)
+            res.status(200).json({userData, residentData})
         })
     } catch (err) {
         console.log(err);
