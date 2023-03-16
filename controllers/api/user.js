@@ -1,31 +1,36 @@
 const router = require('express').Router();
-const Resident = require('../../models/Resident');
+const { Resident, User } = require('../../models');
 
 
 router.get('/user/:id', async (req, res) => {
-    if (!req.session.loggedIn){
+    if (!req.session.loggedIn) {
         res.redirect('/login');
     } else {
         try {
-            const dbUserData = await Resident.findByPk(req.params.id, {
+            const dbResidentData = await Resident.findByPk(req.params.id, {
                 include: [
                     {
-                        model: Resident,
-                        attributes: [
-                            'first_name',
-                            'last_name',
-                            'email',
-                            'apartment_number',
-                            'car_make',
-                            'car_model',
-                            'car_color',
-                            'license_plate'
-                        ],
+                        model: User,
+                        attributes: ['email']
                     },
                 ],
+                attributes: [
+                    'first_name',
+                    'last_name',
+                    'apartment_number',
+                    'car_make',
+                    'car_model',
+                    'car_color',
+                    'license_plate'
+                ],
+            });
+
+            const resident = dbResidentData.get({ plain: true });
+            const dbUserData = await User.findByPk(req.params.id, {
+                attributes: ['email']
             });
             const user = dbUserData.get({ plain: true });
-            res.render('user', { user, loggedIn: req.session.loggedIn });
+            res.render('user', {user, resident, loggedIn: req.session.loggedIn });
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
