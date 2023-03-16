@@ -12,6 +12,11 @@ passport.use(new LocalStrategy.Strategy({usernameField: 'email'}, async (usernam
             }
         })
         console.log(user);
+
+        if (!user) {
+            return done(null, false, { message: 'Incorrect Username or Password'});
+        };
+
         return done(null, user);
     } catch (error) {
         return done(error);
