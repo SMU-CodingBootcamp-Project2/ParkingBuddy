@@ -15,57 +15,93 @@
         </div>
     </nav>
 <section>
-    <p>Users will be able to view their parking spaces and make requests for additional spaces here. Tables will be rendered below after queries.</p>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-    <div class="card" style="width: 18rem;">
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-  <div class="card-body">
-    <h5 class="card-title">View Current Parking Information</h5>
-    <p class="card-text">Review your current saved vehicle information, reserved parking spots, and view available spots</p>
+    <div class="container border border-primary rounded col-md-4 float-left">
+    <div class="row">
+      <div class="col-md-12">
+        <h5 class="container text text-center">Account Information</h5>
+        <ul class="list-group">
+          <li class="list-group-item">Name</li>
+          <li class="list-group-item">Address</li>
+          <li class="list-group-item">Unit Number</li>
+          <li class="list-group-item">Email</li>
+          <li class="list-group-item">Vehicle Make</li>
+          <li class="list-group-item">Vehicle Model</li>
+          <li class="list-group-item">Vehicle Color</li>
+          <li class="list-group-item">Vehicle Plate Number</li>
+        </ul>
+      </div>
+        <div class="col-md-12"></div>
+    </div>
+    </div>
+    <div class="container mx-auto card-deck mt-3">
+  <div class="card col-sm-3">
+    <div class="card-body">
+      <h5 class="card-title">Guest Parking Availability</h5>
+      <p class="card-text">View all current available guest parking spots</p>
+      <a href="#" class="btn btn-primary">View Spots</a>
+    </div>
   </div>
-  <div class="card-body">
-    <a href="#" class="link"><button type="button" class="btn btn-primary">My Vehicle Information</button></a>
-    <a href="#" class="link"><button type="button" class="btn btn-primary">My Parking Spots</button></a>
-    <a href="#" class="link"><button type="button" class="btn btn-primary">View Available Spots</button></a>
+  <div class="card col-sm-3">
+    <div class="card-body">
+      <h5 class="card-title">Request Guest Parking Spot</h5>
+      <p class="card-text">Submit a request to the property managers for a guest parking spot. Requests will be approved or denied after review.</p>
+      <a href="#" class="btn btn-primary">Submit Request</a>
+    </div>
   </div>
 </div>
-    </div>
-    <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+<div>
+  <table class="table d-block">
+  <thead>
+    <tr>
+      <th scope="col">Spot#</th>
+      <th scope="col">Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>West</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>North</td>
+    </tr>
+   <tr>
+      <td>3</td>
+      <td>East</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>South</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    {{!-- <div class="row">
+        <div class="col-md-6">
+          <div class="card" style="width: 18rem;">
+  <div class="card-deck">
+  <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Upate My Information</h5>
-    <p class="card-text">Change your vehicle or account information.</p>
-  </div>
-  <div class="card-body">
-    <a href="#" class="link"><button type="button" class="btn btn-secondary">Update My Vehicle Details</button></a>
-    <a href="#" class="link"><button type="button" class="btn btn-secondary">Update My Account</button></a>
-  </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card" style="width: 18rem;">
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-  <div class="card-body">
-    <h5 class="card-title">Requests for Additional Parking Spots</h5>
-    <p class="card-text">Submit requests for additional and/or guest parking spots.</p>
-  </div>
-  <div class="card-body">
-    <a href="#" class="link"><button type="button" class="btn btn-dark">Request Resident Spot</button></a>
-    <a href="#" class="link"><button type="button" class="btn btn-dark">Request Guest Spot</button></a>
+    <h5 class="card-title"></h5>
+    <p class="card-text">View all current available guest parking spots</p>
+    <a href="#" class="btn btn-primary">View Spots</a>
   </div>
 </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card" style="width: 18rem;">
 
-    {{!-- <ul>
-        <li><button type="button" class="btn btn-primary">GET available guest parking spots</button></li>
-        <li><button type="button" class="btn btn-primary">GET info from their personal spots</button></li>
-        <li><button type="button" class="btn btn-primary">GET vehicle information</button></li>
-        <li><button type="button" class="btn btn-info">PUT update vehicle information</button></li>
-        <li><button type="button" class="btn btn-info">PUT update account information</button></li>
-        <li><button type="button" class="btn btn-info">POST request guest spot using vehicle info</button></li>
-    </ul> --}}
+  <div class="card-body">
+    <h5 class="card-title">Request Guest Parking Spot</h5>
+    <p class="card-text">Submit a request to the property managers for a guest parking spot. Requests will be approved or denied after review.</p>
+    <a href="#" class="btn btn-primary">Submit Request</a>
+  </div>
+</div>
+        </div>
+    </div>
+    </div>
+    </div> --}}
 </section>
 <footer class="text-center">
                 <div class="container text-muted py-4 py-lg-5">
