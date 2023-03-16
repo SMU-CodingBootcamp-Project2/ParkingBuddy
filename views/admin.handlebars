@@ -3,7 +3,7 @@
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg class="bi bi-bezier" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
                         <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-                    </svg></span><span><strong>Parking Buddy</strong></span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    </svg></span><span><strong>Parking Buddy-Administrative Portal</strong></span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-2" class="float-right">
                 <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="http://localhost:3001">Home</a></li>
@@ -16,70 +16,78 @@
             </div>
         </div>
     </nav>
-<section>
-    <p>Admins will be able to view their parking spaces and make requests for additional spaces here. Tables will be rendered below after queries.</p>
-    <div class="text-center">RENDER PENDING REQUESTS HERE</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-    <div class="card" style="width: 18rem;">
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-  <div class="card-body">
-    <h5 class="card-title">Search Parking Details</h5>
+  <section>
+    <h5>Parking Requests Pending Review/Approval</h5>
+    <div class="container border border-primary rounded col-md-4 float-left">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <ul class="list-group">
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+        </ul>
+      </div>
+        <div class="col-md-12"></div>
+    </div>
+    </div>
+    <div class="container mx-auto card-deck mt-3">
+  <div class="card col-sm-3">
+    <div class="card-body">
+      <h5 class="card-title">View All Parking Details</h5>
+      <p class="card-text">Pulls all relevant parking lot details, available and reserved</p>
+      <a href="#" class="btn btn-primary">View All Parking</a>
+    </div>
   </div>
-  <div class="card-body">
-    <a href="#" class="card-link d-block"><a href="#" class="link"><button type="button" class="btn btn-primary">View All Spots</button></a>
-    <a href="#" class="card-link d-block"><a href="#" class="link"><button type="button" class="btn btn-primary">Search for Reserved Spots</button></a>
-    <a href="#" class="card-link d-block"><a href="#" class="link"><button type="button" class="btn btn-primary">Search for Guest Parking Spots</button></a>
-    <a href="#" class="card-link d-block"><a href="#" class="link"><button type="button" class="btn btn-primary">Get Vehicle Information</button></a>
+  <div class="container card col-sm-3">
+    <div class="card-body">
+      <h5 class="card-title">View All Resident Information</h5>
+      <p class="card-text">Submit a request to the property managers for a guest parking spot. Requests will be approved or denied after review.</p>
+      <a href="#" class="btn btn-primary">View All Resident</a>
+    </div>
+  </div>
+  <div class="card col-sm-3">
+    <div class="card-body">
+      <h5 class="card-title">Delete All</h5>
+      <p class="card-text">Deletes all data... probably bad.</p>
+      <a href="#" class="btn btn-danger">Delete All</a>
+    </div>
   </div>
 </div>
-    </div>
-    <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-  <div class="card-body">
-    <h5 class="card-title">Update Accounts and Parking Details</h5>
-  </div>
-  <div class="card-body">
-    <a href="#" class="card-link d-block"><button type="button" class="btn btn-secondary">Update Resident Information</button></a>
-    <a href="#" class="card-link d-block"><button type="button" class="btn btn-secondary">Update Total Parking</button></a>
-    <a href="#" class="card-link d-block"><button type="button" class="btn btn-secondary">Update Guest Parking Spots</button></a>
-  </div>
-    </div>
-    <div class="col-sm">
-      <div class="card" style="width: 18rem;">
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-  <div class="card-body">
-    <h5 class="card-title">Create New Accounts</h5>
-  </div>
-  <div class="card-body">
-    <a href="#" class="card-link d-block"><button type="button" class="btn btn-dark">New Resident Information</button></a>
-    <a href="#" class="card-link d-block"><button type="button" class="btn btn-dark">New Parking Spot Information</button></a>
-    <a href="#" class="card-link d-block"><button type="button" class="btn btn-dark">New Vehicle Information</button></a>
-  </div>
+<div>
+  <h3 class="container text-center">Search Results</h3>
+  <ul class="list-group">
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+          <li class="list-group-item">Data Populated from GET</li>
+        </ul>
 </div>
-<div class="col-sm">
-    <div class="card" style="width: 18rem;">
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-  <div class="card-body">
-    <h5 class="card-title">DELETE</h5>
-  </div>
-  <div class="card-body">
-    <a href="#" class="card-link d-block"><button type="button" class="btn btn-danger">DELETE EVERYTHING</button></a>
-   </div>
-</div>
-    </div>
-
-    {{!-- <ul>
-        <li><button type="button" class="btn btn-primary">GET available guest parking spots</button></li>
-        <li><button type="button" class="btn btn-primary">GET info from their personal spots</button></li>
-        <li><button type="button" class="btn btn-primary">GET vehicle information</button></li>
-        <li><button type="button" class="btn btn-info">PUT update vehicle information</button></li>
-        <li><button type="button" class="btn btn-info">PUT update account information</button></li>
-        <li><button type="button" class="btn btn-info">POST request guest spot using vehicle info</button></li>
-    </ul> --}}
 </section>
 <footer class="text-center">
                 <div class="container text-muted py-4 py-lg-5">
@@ -103,20 +111,3 @@
                 </div>
             </footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
-
-
-
-    {{!-- <ul>
-        <li><button type="button" class="btn btn-primary">GET total spots</button></li>
-        <li><button type="button" class="btn btn-primary">GET permanent resident spot</button></li>
-        <li><button type="button" class="btn btn-primary">GET used/unused guest parking spots</button></li>
-        <li><button type="button" class="btn btn-primary">GET all/specific vehicle info</button></li>
-        <li><button type="button" class="btn btn-info">PUT update resident information</button></li>
-        <li><button type="button" class="btn btn-info">PUT update total parking</button></li>
-        <li><button type="button" class="btn btn-info">PUT update available guest spots</button></li>
-        <li><button type="button" class="btn btn-success">POST new residents</button></li>
-        <li><button type="button" class="btn btn-success">POST new permanent parking</button></li>
-        <li><button type="button" class="btn btn-success">POST new resident vehicle info</button></li>
-        <li><button type="button" class="btn btn-danger">DELETE everything</button></li>
-    </ul> --}}
