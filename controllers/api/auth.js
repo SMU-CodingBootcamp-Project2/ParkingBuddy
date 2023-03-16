@@ -3,8 +3,9 @@ const router = express.Router();
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const { User } = require('../../models');
+const bcrypt = require('bcrypt');
 
-passport.use(new LocalStrategy.Strategy({usernameField: 'email'}, async (username, password, done) => {
+passport.use(new LocalStrategy.Strategy({ usernameField: 'email' }, async (username, password, done) => {
     try {
         const user = await User.findOne({
             where: {
@@ -13,9 +14,15 @@ passport.use(new LocalStrategy.Strategy({usernameField: 'email'}, async (usernam
         })
         console.log(user);
 
+
         if (!user) {
-            return done(null, false, { message: 'Incorrect Username or Password'});
+            return done(null, false, { message: 'Incorrect Username or Password' });
         };
+
+        const validPassword = await user.checkPassword(password);
+        if (!validPassword) {
+            return done(null, false, { message: 'Incorrect Username or Password' });;
+        }
 
         return done(null, user);
     } catch (error) {
@@ -23,11 +30,11 @@ passport.use(new LocalStrategy.Strategy({usernameField: 'email'}, async (usernam
     }
 }));
 
-passport.serializeUser(function(user, done) {
+passport.serializeUser(function (user, done) {
     done(null, user.id);
 });
 
-passport.deserializeUser(function(user, done) {
+passport.deserializeUser(function (user, done) {
     done(null, user);
 })
 
