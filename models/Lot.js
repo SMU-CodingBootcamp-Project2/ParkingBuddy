@@ -20,26 +20,6 @@ Lot.init(
             allowNull: false,
             defaultValue: 100,
         },
-        first_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: "",
-        },
-        last_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: "",
-        },
-        license_plate: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            defaultValue: "",
-        },
-        apartment_number: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: "",
-        },
         is_resident: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
