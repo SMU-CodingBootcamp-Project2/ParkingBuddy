@@ -2,11 +2,11 @@ const Resident = require('./Resident');
 const Lot = require('./Lot');
 const User = require('./User')
 
-Resident.belongsTo(Lot, {
-    foreignKey: 'lot_id',
+Lot.belongsTo(Resident, {
+    foreignKey: 'resident_id',
 });
-Lot.hasMany(Resident, {
-    foreignKey: 'lot_id',
+Resident.hasMany(Lot, {
+    foreignKey: 'resident_id',
 });
 User.hasOne(Resident, {
     foreignKey: 'user_id',

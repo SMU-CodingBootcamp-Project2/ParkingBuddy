@@ -9,26 +9,45 @@ Lot.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: {
-                startAt: 1,
-                endAt: 100
+            autoIncrement: true,
+            validate: {
+                min: 1,
+                max: 100
             }
         },
-        total_parking: {
+        available_spots: {
             type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 100,
         },
-        resident_spots: {
+        first_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        last_name: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            defaultValue: 60,
         },
-        guest_spots: {
+        license_plate: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        apartment_number: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        is_resident: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        resident_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            defaultValue: 40,
-        },
+            references: {
+                model: 'resident',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,
