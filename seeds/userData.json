@@ -1,9 +1,12 @@
 {
     "lots": [
       {
-        "total_parking": 100,
-        "resident_spots": 60,
-        "guest_spots": 40
+        "available_spots": 99,
+        "resident_id": 1
+      },
+      {
+        "available_spots": 98,
+        "resident_id": 2
       }
     ],
   
@@ -16,9 +19,8 @@
         "car_model": "Camry",
         "car_color": "Yellow",
         "apartment_number": "101",
-        "assignedSpots": 2,
         "lot_id": 1,
-        "is_residental": true
+        "is_resident": true
       },
       {
         "first_name": "Jane",
@@ -28,9 +30,8 @@
         "car_model": "Accord",
         "car_color": "blue",
         "apartment_number": "102",
-        "assignedSpots": 1,
         "lot_id": 1,
-        "is_residental": false
+        "is_resident": false
       }
     ],
   
