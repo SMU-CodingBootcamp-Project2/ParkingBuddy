@@ -27,6 +27,14 @@ app.set('view engine', 'handlebars');
 app.use(passport.initialize())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use((req, res, next) => {
+    console.log(req.session.messages);
+    let messages = req.session.messages || [];
+    res.locals.messages = messages;
+    res.locals.hasMessages = !!messages.length;
+    req.session.messages = [];
+    next();
+});
 
 app.use(routes);
 
