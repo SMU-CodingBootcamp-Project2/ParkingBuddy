@@ -30,10 +30,12 @@ passport.use(new LocalStrategy.Strategy({ usernameField: 'email' }, async (usern
 }));
 
 passport.serializeUser(function (user, done) {
+ 
     done(null, user.id);
 });
 
 passport.deserializeUser(function (user, done) {
+    
     done(null, user);
 })
 
@@ -49,6 +51,7 @@ router.post('/', passport.authenticate('local', {
     // badRequestMessage: 'Incorrect Username or Password',
     failureMessage: true
 }), (req, res) => {
+    req.session.logged_in = true;
     res.redirect('/user');
 });
 

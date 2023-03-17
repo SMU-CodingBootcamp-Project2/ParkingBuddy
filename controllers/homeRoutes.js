@@ -1,10 +1,11 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     res.render('homepage');
 });
 
-router.get('/user', async (req, res) => {
+router.get('/user', withAuth, async (req, res) => {
     res.render('user');
 });
 
