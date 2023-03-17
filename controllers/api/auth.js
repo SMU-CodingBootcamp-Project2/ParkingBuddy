@@ -3,7 +3,6 @@ const router = express.Router();
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const { User } = require('../../models');
-const bcrypt = require('bcrypt');
 
 passport.use(new LocalStrategy.Strategy({ usernameField: 'email' }, async (username, password, done) => {
     try {
@@ -19,7 +18,7 @@ passport.use(new LocalStrategy.Strategy({ usernameField: 'email' }, async (usern
             return done(null, false, { message: 'Incorrect Username or Password' });
         };
 
-        const validPassword = await user.checkPassword(password);
+        const validPassword = user.checkPassword(password);
         if (!validPassword) {
             return done(null, false, { message: 'Incorrect Username or Password' });;
         }
@@ -39,12 +38,16 @@ passport.deserializeUser(function (user, done) {
 })
 
 router.get('/', async (req, res) => {
+    console.log(req.session);
     res.render('login');
+
 });
 
 router.post('/', passport.authenticate('local', {
-    // successRedirect: '/user',
-    failureRedirect: '/login'
+    // successRedirect: '/user'
+    failureRedirect: '/login',
+    // badRequestMessage: 'Incorrect Username or Password',
+    failureMessage: true
 }), (req, res) => {
     res.redirect('/user');
 });
