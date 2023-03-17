@@ -55,11 +55,6 @@ Resident.init(
                 key: 'id',
             },
         },
-        parking_space: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 0,
-        },
         is_resident: {
             type: DataTypes.BOOLEAN
         },
