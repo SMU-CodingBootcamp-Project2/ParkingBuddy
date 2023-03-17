@@ -33,7 +33,7 @@ User.init(
         },
         has_admin: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            allowNull: true,
         }
     },
     {
