@@ -31,6 +31,10 @@ User.init(
                 len: [8],
             },
         },
+        has_admin: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        }
     },
     {
         hooks: {
