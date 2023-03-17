@@ -45,15 +45,6 @@ Lot.init(
             allowNull: false,
             defaultValue: true,
         },
-        resident_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 1,
-            references: {
-                model: 'resident',
-                key: 'id'
-            }
-        }
     },
     {
         sequelize,

@@ -3,18 +3,17 @@ const Lot = require('../models/Lot');
 const Resident = require('../models/Resident');
 const User = require('../models/User');
 const userData = require('./userData.json');
-const lotsAndResidents = [...userData.lots, ...userData.residents];
 
 const seedDatabase = async () => {
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: true });
 
         // Seeds the Lot table
-        await Lot.bulkCreate(lotsAndResidents, {
+        await Lot.bulkCreate(userData.lots, {
             individualHooks: true,
             returning: true,
         });
 
-        // Seeds the Residents table
+    // Seeds the Residents table
         await Resident.bulkCreate(userData.residents, {
             individualHooks: true,
             returning: true,

@@ -25,6 +25,7 @@ Resident.init(
             type: DataTypes.STRING,
             allowNull: false,
             defaultValue: "",
+            unique: true,
         },
         car_make: {
             type: DataTypes.STRING,
@@ -51,12 +52,9 @@ Resident.init(
             allowNull: false,
             defaultValue: 0,
             references: {
-                model: 'lot',
+                model: 'Lot',
                 key: 'id',
             },
-        },
-        is_resident: {
-            type: DataTypes.BOOLEAN
         },
     },
     {
