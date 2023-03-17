@@ -34,14 +34,19 @@
   
     "users": [
       {
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "has_admin": true
+      },
+      {
         "email": "aFunnyOne@gmail.com",
-        "username": "johndoe",
-        "password": "password123"
+        "password": "password123",
+        "has_admin": false
       },
       {
         "email": "aDumbOne@gmail.com",
-        "username": "janedoe",
-        "password": "password456"
+        "password": "password456",
+        "has_admin": false
       }
     ]
   }
