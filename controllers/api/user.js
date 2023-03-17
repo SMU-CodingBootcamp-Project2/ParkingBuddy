@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Resident, User } = require('../../models');
 
 
-router.get('/user/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     if (!req.session.loggedIn) {
         res.redirect('/login');
     } else {
@@ -37,3 +37,5 @@ router.get('/user/:id', async (req, res) => {
         }
     }
 });
+
+module.exports = router;
