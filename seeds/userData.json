@@ -1,9 +1,9 @@
 {
     "lots": [
       {
-        "totalSpots": 100,
-        "assignedResidentSpots": 60,
-        "availableGuestSpots": 40
+        "total_parking": 100,
+        "resident_spots": 60,
+        "guest_spots": 40
       }
     ],
   
@@ -17,30 +17,30 @@
         "car_color": "Yellow",
         "apartment_number": "101",
         "assignedSpots": 2,
-        "lot_id": 1
+        "lot_id": 1,
+        "is_residental": true
       },
       {
         "first_name": "Jane",
         "last_name": "Doe",
-        "license_late": "DEF456",
+        "license_plate": "DEF456",
         "car_make": "Honda",
         "car_model": "Accord",
         "car_color": "blue",
         "apartment_number": "102",
         "assignedSpots": 1,
-        "lot_id": 1
+        "lot_id": 1,
+        "is_residental": false
       }
     ],
   
     "users": [
       {
         "email": "aFunnyOne@gmail.com",
-        "username": "johndoe",
         "password": "password123"
       },
       {
         "email": "aDumbOne@gmail.com",
-        "username": "janedoe",
         "password": "password456"
       }
     ]
