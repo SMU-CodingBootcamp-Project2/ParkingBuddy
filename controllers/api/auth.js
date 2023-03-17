@@ -4,9 +4,11 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const { User } = require('../../models');
 
+let user;
+
 passport.use(new LocalStrategy.Strategy({ usernameField: 'email' }, async (username, password, done) => {
     try {
-        const user = await User.findOne({
+        user = await User.findOne({
             where: {
                 email: username
             }
@@ -52,7 +54,12 @@ router.post('/', passport.authenticate('local', {
     failureMessage: true
 }), (req, res) => {
     req.session.logged_in = true;
-    res.redirect('/user');
+    if (user.has_admin) {
+        res.redirect('/admin');
+    } else {
+        res.redirect('/user');
+    }
+    
 });
 
 

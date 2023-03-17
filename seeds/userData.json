@@ -36,12 +36,19 @@
   
     "users": [
       {
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "has_admin": true
+      },
+      {
         "email": "aFunnyOne@gmail.com",
-        "password": "password123"
+        "password": "password123",
+        "has_admin": false
       },
       {
         "email": "aDumbOne@gmail.com",
-        "password": "password456"
+        "password": "password456",
+        "has_admin": false
       }
     ]
   }
