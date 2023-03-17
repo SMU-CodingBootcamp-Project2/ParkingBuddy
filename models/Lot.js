@@ -9,7 +9,10 @@ Lot.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: {
+                startAt: 1,
+                endAt: 100
+            }
         },
         total_parking: {
             type: DataTypes.INTEGER,

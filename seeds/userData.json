@@ -9,22 +9,24 @@
   
     "residents": [
       {
-        "firstName": "John",
-        "lastName": "Doe",
-        "vehicleLicensePlate": "ABC123",
-        "carMake": "Toyota",
-        "carModel": "Camry",
-        "apartmentNumber": "101",
+        "first_name": "John",
+        "last_name": "Doe",
+        "license_plate": "ABC123",
+        "car_make": "Toyota",
+        "car_model": "Camry",
+        "car_color": "Yellow",
+        "apartment_number": "101",
         "assignedSpots": 2,
         "lot_id": 1
       },
       {
-        "firstName": "Jane",
-        "lastName": "Doe",
-        "vehicleLicensePlate": "DEF456",
-        "carMake": "Honda",
-        "carModel": "Accord",
-        "apartmentNumber": "102",
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "license_late": "DEF456",
+        "car_make": "Honda",
+        "car_model": "Accord",
+        "car_color": "blue",
+        "apartment_number": "102",
         "assignedSpots": 1,
         "lot_id": 1
       }
