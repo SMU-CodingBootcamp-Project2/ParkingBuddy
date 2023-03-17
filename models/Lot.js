@@ -23,26 +23,32 @@ Lot.init(
         first_name: {
             type: DataTypes.STRING,
             allowNull: false,
+            defaultValue: "",
         },
         last_name: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
+            defaultValue: "",
         },
         license_plate: {
             type: DataTypes.STRING,
             allowNull: true,
+            defaultValue: "",
         },
         apartment_number: {
             type: DataTypes.STRING,
             allowNull: false,
+            defaultValue: "",
         },
         is_resident: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
+            defaultValue: true,
         },
         resident_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 1,
             references: {
                 model: 'resident',
                 key: 'id'
