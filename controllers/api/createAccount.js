@@ -19,6 +19,7 @@ router.post('/createaccount', async (req, res) => {
         });
         req.session.save(() => {
             req.session.loggedIn = true;
+            res.redirect('/user');
 
             res.status(200).json({userData, residentData})
         })
