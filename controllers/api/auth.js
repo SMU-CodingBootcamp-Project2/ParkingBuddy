@@ -62,5 +62,19 @@ router.post('/', passport.authenticate('local', {
     
 });
 
+router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
+            res.status(204).end();
+            res.redirect('/login');
+        });
+    } else {
+        console.log('inAuth');
+        // res.redirect('/login');
+        res.status(404).end();
+        
+    }
+});
+
 
 module.exports = router;
