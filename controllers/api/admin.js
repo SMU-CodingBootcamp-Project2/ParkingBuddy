@@ -6,7 +6,7 @@ router.get('/admin', async (req, res) => {
         res.redirect('./user');
     } else {
         try {
-            const adminData = await User.findByPk(req.params.has_admin, {
+            const adminData = await User.findByPk(req.params.id, {
                 include: [
                     {
                         model: Resident,
@@ -34,7 +34,7 @@ router.get('/admin', async (req, res) => {
                 attributes: ['email']
             });
             const user = userData.get({ plain: true });
-            res.render('admin', {user, admin, loggedIn: req.session.loggedIn});
+            res.render('admin', {user, admin, has_admin: req.session.has_admin});
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
