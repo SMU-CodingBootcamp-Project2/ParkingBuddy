@@ -52,7 +52,7 @@ Resident.init(
             allowNull: false,
             defaultValue: 0,
             references: {
-                model: 'Lot',
+                model: 'lot',
                 key: 'id',
             },
         },
