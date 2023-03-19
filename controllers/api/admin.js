@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const { Lot, Resident, User } = require('../../models');
 
-router.get('/admin', async (req, res) => {
-    if(!req.sessions.has_admin) {
+router.get('/', async (req, res) => {
+    if(!req.session.has_admin) {
         res.redirect('./user');
     } else {
         try {
-            const adminData = await User.findByPk(req.params.has_admin, {
+            const adminData = await User.findByPk(req.params.id, {
                 include: [
                     {
                         model: Resident,
@@ -22,7 +22,6 @@ router.get('/admin', async (req, res) => {
                         model: Lot,
                         attributes: [
                             'available_spots',
-                            'is_resident'
                         ]
                     },
                 ],
