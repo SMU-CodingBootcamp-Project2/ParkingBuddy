@@ -1,21 +1,50 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
+const userData = require('./api/userRoutes');
 
 router.get('/', async (req, res) => {
     res.render('homepage');
 });
 
 router.get('/login', async (req, res) => {
-   
-    res.render('login');
+    console.log(req.session.user_admin);
+    if (req.session.logged_in) {
+        if (req.session.user_admin) {
+            res.redirect('/admin');
+        } else {
+            res.redirect('/user');
+        }
+    } else {
+        res.render('login');
+    }
+    
 });
 
-router.get('/user', withAuth, async (req, res) => {
-    res.render('user');
+router.get('/user', async (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/login');
+    } else {
+        if (req.session.user_admin) {
+            res.redirect('/admin')
+        } else {
+            res.render('user');
+        }
+        
+    }
+    
 });
 
-router.get('/admin', withAuth, async (req, res) => {
-    res.render('admin');
+router.get('/admin', async (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/login');
+    } else {
+        if (!req.session.user_admin) {
+            res.redirect('/user');
+        } else {
+            res.render('admin');
+        }
+        
+    }
+    
 });
 
 router.get('/createaccount', async (req, res) => {
