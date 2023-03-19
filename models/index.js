@@ -1,6 +1,7 @@
 const Resident = require('./Resident');
 const Lot = require('./Lot');
-const User = require('./User')
+const User = require('./User');
+const Guest = require('./Guest');
 
 Resident.belongsTo(Lot, {
     foreignKey: 'lot_id',
@@ -16,4 +17,4 @@ Resident.belongsTo(User, {
 });
 
 
-module.exports = { Resident, Lot, User}
+module.exports = { Resident, Lot, User, Guest}
