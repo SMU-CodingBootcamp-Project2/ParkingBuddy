@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
                     {
                         model: Lot,
                         attributes: [
-                            'is_resident'
+                            'available_spots',
                         ]
                     },
                 ],
