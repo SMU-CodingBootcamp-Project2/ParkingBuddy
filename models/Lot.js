@@ -15,11 +15,11 @@ Lot.init(
                 max: 100
             }
         },
-        is_resident: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: true,
-        },
+        // is_resident: {
+        //     type: DataTypes.BOOLEAN,
+        //     allowNull: false,
+        //     defaultValue: true,
+        // },
     },
     {
         sequelize,

@@ -19,29 +19,29 @@
     </div>
     <div class="container-md border border-primary rounded">
     <h5 class="mt-2">Personal Information</h5>
-<form>
+<form action="/api/users/createaccount" method="POST">
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputEmail3">
+      <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Last Name</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputPassword3">
+      <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Address</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword3">
+      <input type="text" class="form-control" id="address" name="address" placeholder="Address">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Unit Number</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Apartment Number</label>
     <div class="col-sm-2">
-      <input type="text" class="form-control" id="inputPassword3">
+      <input type="text" class="form-control" id="apartment_number" name="apartment_number" placeholder="Apt Number">
     </div>
   </div>
   <h5>Account Information</h5>
@@ -49,39 +49,39 @@
     <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Email Address</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputPassword3">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
     </div>
   </div>
   <h5>Vehicle Details</h5>
   <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Vehicle Make</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputPassword3">
+      <input type="text" class="form-control" id="car_make" name="car_make" placeholder="Vehicle Make">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Vehicle Model</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputPassword3">
+      <input type="text" class="form-control" id="car_model" name="car_model" placeholder="Vehicle Model">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Vehicle Color</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputPassword3">
+      <input type="text" class="form-control" id="car_color" name="car_color" placeholder="Vehicle Color">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Vehicle Plate Number</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">License Plate Number</label>
     <div class="col-sm-4">
 
-      <input type="name" class="form-control" id="inputPassword3">  
+      <input type="name" class="form-control" id="license_plate" name="license_plate" placeholder="License Plate Number">  
 
       
     </div>
