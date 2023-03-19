@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Lot, Resident, User } = require('../../models');
 
-router.get('/admin', async (req, res) => {
-    if(!req.sessions.has_admin) {
+router.get('/', async (req, res) => {
+    if(!req.session.has_admin) {
         res.redirect('./user');
     } else {
         try {
@@ -21,7 +21,6 @@ router.get('/admin', async (req, res) => {
                     {
                         model: Lot,
                         attributes: [
-                            'available_spots',
                             'is_resident'
                         ]
                     },
@@ -34,7 +33,7 @@ router.get('/admin', async (req, res) => {
                 attributes: ['email']
             });
             const user = userData.get({ plain: true });
-            res.render('admin', {user, admin, has_admin: req.session.has_admin});
+            res.json('admin', {user, admin, has_admin: req.session.has_admin});
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
