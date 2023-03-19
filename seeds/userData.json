@@ -49,6 +49,19 @@
         "password": "password456",
         "has_admin": false
       }
+    ],
+
+    "guest": [
+      {
+        "first_name": "Johnny",
+        "last_name": "Speed",
+        "license_plate": "RKF1657",
+        "car_make": "VW",
+        "car_model": "GTI",
+        "car_color": "Blue",
+        "resident_first_name": "John",
+        "resident_last_name": "Doe"
+      }
     ]
   }
   
