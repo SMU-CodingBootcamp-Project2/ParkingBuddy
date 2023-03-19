@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Lot, Resident, User } = require('../../models');
 
-router.get('/', async (req, res) => {
+router.get('/admin', async (req, res) => {
     if(!req.session.has_admin) {
         res.redirect('./user');
     } else {
