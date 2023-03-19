@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 // needs work
-router.post('/logout', (req, res) => {
+router.post('/', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
