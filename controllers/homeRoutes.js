@@ -5,11 +5,15 @@ router.get('/', async (req, res) => {
     res.render('homepage');
 });
 
+router.get('/login', async (req, res) => {
+    res.render('login');
+});
+
 router.get('/user', withAuth, async (req, res) => {
     res.render('user');
 });
 
-router.get('/admin', async (req, res) => {
+router.get('/admin', withAuth, async (req, res) => {
     res.render('admin');
 });
 
