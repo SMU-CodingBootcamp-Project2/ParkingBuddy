@@ -28,9 +28,8 @@ router.post('/createaccount', async (req, res) => {
         req.session.save(() => {
             req.session.user_admin = userData.has_admin;
             req.session.user_id = userData.id;
-            req.session.logged_in = true;
 
-            res.status(200).json(userData, residentData);
+            res.redirect('/login');
         })
         
     } catch (err) {
