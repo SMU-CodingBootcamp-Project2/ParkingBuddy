@@ -19,8 +19,7 @@
         "car_model": "Camry",
         "car_color": "Yellow",
         "apartment_number": "101",
-        "lot_id": 1,
-        "is_resident": true
+        "lot_id": 1
       },
       {
         "first_name": "Jane",
@@ -30,8 +29,7 @@
         "car_model": "Accord",
         "car_color": "blue",
         "apartment_number": "102",
-        "lot_id": 1,
-        "is_resident": false
+        "lot_id": 1
       }
     ],
   

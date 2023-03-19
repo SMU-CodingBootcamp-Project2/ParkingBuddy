@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
                 attributes: ['email']
             });
             const user = userData.get({ plain: true });
-            res.render('admin', {user, admin, loggedIn: req.session.loggedIn});
+            res.json('admin', {user, admin, has_admin: req.session.has_admin});
         } catch (err) {
             console.log(err);
             res.status(500).json(err);

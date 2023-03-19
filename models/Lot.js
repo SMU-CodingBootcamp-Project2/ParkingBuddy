@@ -15,11 +15,6 @@ Lot.init(
                 max: 100
             }
         },
-        available_spots: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 100,
-        },
         is_resident: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
