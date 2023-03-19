@@ -16,5 +16,13 @@ Resident.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
+Guest.belongsTo(Resident, {
+    foreignKey: 'resident_id',
+});
 
-module.exports = { Resident, Lot, User, Guest}
+Resident.hasMany(Guest, {
+    foreignKey: 'resident_id',
+});
+
+
+module.exports = { Resident, Lot, User, Guest }
