@@ -23,6 +23,7 @@ router.post('/createaccount', async (req, res) => {
             car_color: req.body.car_color,
             license_plate: req.body.license_plate,
             lot_id: lotData.id,
+            user_id: userData.id
         });
 
         req.session.save(() => {
