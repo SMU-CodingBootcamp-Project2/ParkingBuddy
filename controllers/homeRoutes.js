@@ -27,8 +27,8 @@ router.get('/user', async (req, res) => {
 
         console.log({user_id:req.session.user_id})
         let userInfo = await Resident.findOne({where: {user_id:req.session.user_id}})
-        userInfo = userInfo.get({plain:true})
         console.log(userInfo)
+        userInfo = userInfo.get({plain:true})
 
 
         if (req.session.user_admin) {
