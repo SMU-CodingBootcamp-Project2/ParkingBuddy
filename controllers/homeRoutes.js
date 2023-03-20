@@ -15,7 +15,7 @@ router.get('/login', async (req, res) => {
             res.redirect('/user');
         }
     } else {
-        res.render('login');
+        res.render('login', { message : req.flash('message')});
     }
     
 });

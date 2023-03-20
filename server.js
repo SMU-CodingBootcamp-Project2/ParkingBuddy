@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
+const flash = require('connect-flash');
 const routes = require('./controllers');
 const path = require('path');
 
@@ -27,6 +28,7 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use(flash());
 
 const hbs = exphbs.create();
 
