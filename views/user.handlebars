@@ -27,15 +27,15 @@
         
         <h5 class="container text text-center">Account Information</h5>
         {{#if residents}}
-        {{!-- {{#each residents as |resident|}} --}}
+        {{#each residents as |resident|}}
         <ul class="list-group">
-          <li class="list-item">{{residents.[(req.session.user_id)+1].first_name}} {{residents.[0].last_name}}</li>
-          <li class="list-item">{{residents.[0].apartment_number}}</li>
-          <li class="list-item">{{residents.[0].car_make}}</li>
-          <li class="list-item">{{residents.[0].car_model}}</li>
-          <li class="list-item">{{residents.[0].car_color}}</li>
-          <li class="list-item">{{residents.[0].license_plate}}</li>
-          {{!-- {{/each}} --}}
+          <li class="list-item">{{first_name}} {{last_name}}</li>
+          <li class="list-item">{{apartment_number}}</li>
+          <li class="list-item">{{car_make}}</li>
+          <li class="list-item">{{car_model}}</li>
+          <li class="list-item">{{car_color}}</li>
+          <li class="list-item">{{license_plate}}</li>
+          {{/each}}
           {{/if}}
         </ul>
       </div>

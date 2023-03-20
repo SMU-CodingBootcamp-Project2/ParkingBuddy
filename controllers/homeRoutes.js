@@ -24,15 +24,19 @@ router.get('/user', async (req, res) => {
     if (!req.session.logged_in) {
         res.redirect('/login');
     } else {
+
+        console.log({user_id:req.session.user_id})
+        let userInfo = await Resident.findOne({where: {user_id:req.session.user_id}})
+        userInfo = userInfo.get({plain:true})
+        console.log(userInfo)
+
+
         if (req.session.user_admin) {
             res.redirect('/admin')
         } else {
-            const residentData = await Resident.findAll({
-                attributes: ['first_name', 'last_name', 'license_plate', 'car_make', 'car_model', 'car_color', 'apartment_number']               
-            });
-            const residents = residentData.map((resident) =>  resident.get({ plain: true }));
+            
             res.render('user', {
-                residents,
+                residents:[userInfo],
             });
         }
         
