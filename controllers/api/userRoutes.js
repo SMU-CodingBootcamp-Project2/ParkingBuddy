@@ -32,7 +32,7 @@ router.post('/createaccount', async (req, res) => {
 
             res.redirect('/login');
         })
-        
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -41,40 +41,35 @@ router.post('/createaccount', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
+        req.flash('message', null); // clear any previous flash messages
         const userData = await User.findOne({
             where: {
                 email: req.body.email
             },
         });
         if (!userData) {
-            res
-                .status(400)
-                .json({
-                    message: 'Incorrect Email or Password'
-                })
-            return;
+            req.flash('message', 'Incorrect Email or Password');
+            res.redirect('/login');
+            return
         }
         const validPassword = userData.checkPassword(req.body.password);
         if (!validPassword) {
-            res
-                .status(400)
-                .json({
-                    message: 'Incorrect Email or Password'
-                })
-            return;
+            req.flash('message', 'Incorrect Email or Password');
+             res.redirect('/login');
+             return
         }
         req.session.save(() => {
             req.session.user_admin = userData.has_admin;
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            if(userData.has_admin){
+            if (userData.has_admin) {
                 res.redirect('/admin');
             } else {
                 res.redirect('/user');
             }
         });
-        
+
     } catch (err) {
         res.status(400).json(err);
     }
