@@ -21,17 +21,22 @@
 <div>
     <div class="container border border-primary rounded col-md-4 float-left">
     <div class="row">
+      
       <div class="col-md-12">
+        
         <h5 class="container text text-center">Account Information</h5>
+        {{#if residents}}
+        {{!-- {{#each residents as |resident|}} --}}
         <ul class="list-group">
-          <li class="list-item">Name</li>
-          <li class="list-item">Address</li>
-          <li class="list-item">Unit Number</li>
-          <li class="list-item">Email</li>
-          <li class="list-item">Vehicle Make</li>
-          <li class="list-item">Vehicle Model</li>
-          <li class="list-item">Vehicle Color</li>
-          <li class="list-item">Vehicle Plate Number</li>
+          <li class="list-item">{{residents.[(req.session.user_id)+1].first_name}} {{residents.[0].last_name}}</li>
+          
+          <li class="list-item">{{residents.[0].apartment_number}}</li>
+          <li class="list-item">{{residents.[0].car_make}}</li>
+          <li class="list-item">{{residents.[0].car_model}}</li>
+          <li class="list-item">{{residents.[0].car_color}}</li>
+          <li class="list-item">{{residents.[0].license_plate}}</li>
+          {{!-- {{/each}} --}}
+          {{/if}}
         </ul>
       </div>
       </div>

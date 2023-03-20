@@ -8,7 +8,7 @@ Resident.belongsTo(Lot, {
 Lot.hasMany(Resident, {
     foreignKey: 'lot_id',
 });
-User.hasOne(Resident, {
+User.hasMany(Resident, {
     foreignKey: 'user_id',
 });
 Resident.belongsTo(User, {

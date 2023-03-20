@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const userData = require('./api/userRoutes');
+const { Resident, User } = require('../models');
+
 
 router.get('/', async (req, res) => {
     res.render('homepage');
@@ -26,7 +27,13 @@ router.get('/user', async (req, res) => {
         if (req.session.user_admin) {
             res.redirect('/admin')
         } else {
-            res.render('user');
+            const residentData = await Resident.findAll({
+                attributes: ['first_name', 'last_name', 'license_plate', 'car_make', 'car_model', 'car_color', 'apartment_number']               
+            });
+            const residents = residentData.map((resident) =>  resident.get({ plain: true }));
+            res.render('user', {
+                residents,
+            });
         }
         
     }
