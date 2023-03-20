@@ -14,13 +14,24 @@
       {
         "first_name": "John",
         "last_name": "Doe",
-        "license_plate": "ABC123",
+        "license_plate": "ABD123",
         "car_make": "Toyota",
         "car_model": "Camry",
         "car_color": "Yellow",
         "apartment_number": "101",
         "lot_id": 1,
         "user_id": 1
+      },
+      {
+        "first_name": "John",
+        "lasaddt_name": "Doe",
+        "license_plate": "ABC123",
+        "car_make": "Toyota",
+        "car_model": "Camry",
+        "car_color": "Yellow",
+        "apartment_number": "101",
+        "lot_id": 1,
+        "user_id": 2
       },
       {
         "first_name": "Jane",
@@ -31,7 +42,7 @@
         "car_color": "blue",
         "apartment_number": "102",
         "lot_id": 1,
-        "user_id": 2
+        "user_id": 3
       }
     ],
   
