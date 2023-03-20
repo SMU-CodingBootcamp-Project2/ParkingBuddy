@@ -42,6 +42,14 @@ Guest.init(
             allowNull: false,
             defaultValue: "",
         },
+        resident_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'resident',
+                key: 'id',
+            },
+        },
         resident_first_name: {
             type: DataTypes.STRING,
             allowNull: false,
