@@ -13,6 +13,11 @@ const seedDatabase = async () => {
         individualHooks: true,
         returning: true,
     });
+    // Seeds the User table
+    await User.bulkCreate(userData.users, {
+        individualHooks: true,
+        returning: true,
+    });
 
     // Seeds the Residents table
     await Resident.bulkCreate(userData.residents, {
@@ -20,11 +25,6 @@ const seedDatabase = async () => {
         returning: true,
     });
 
-    // Seeds the User table
-    await User.bulkCreate(userData.users, {
-        individualHooks: true,
-        returning: true,
-    });
 
     // Seeds the Guest table
     await Guest.bulkCreate(userData.guest, {
