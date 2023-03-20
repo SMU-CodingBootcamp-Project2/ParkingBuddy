@@ -2,7 +2,7 @@
 
 ## Description
 
--The "Parking Buddy" application allows Users to store and manage parking lot information for their respective properties. As apartment residents, Users can create accounts which will store their personal and vehicle information, allow them to manage their own parking spot details, as well as submit requests for temporary parking permits for guests. As apartment administrators, Users can manage all resident information, review and update parking spot details, and approve or deny submitted requests for temporary parking permits. This application was made using Bootstrap for styling, <!--ADD ANY OTHER TECHNOLOGIES AND USAGES HERE, I will be sure to mention them specifically below>.
+-The "Parking Buddy" application allows Users to store and manage parking lot information for their respective properties. As apartment residents, Users can create accounts which will store their personal and vehicle information, allow them to manage their own parking spot details, as well as submit requests for temporary parking permits for guest spots if available. As apartment administrators, Users can manage all resident information, review and update parking spot details, and approve or deny submitted requests for temporary parking permits. This application was made using Bootstrap for styling, <!--ADD ANY OTHER TECHNOLOGIES AND USAGES HERE, I will be sure to mention them specifically below>.
 
 -Upon landing at the homepage, both resident and administrative Users are greeted and prompted to log into their accounts. The "Log-In" button will direct them to the Log-In Page. 
 
