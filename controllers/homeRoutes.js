@@ -62,7 +62,4 @@ router.get('/createaccount', async (req, res) => {
     res.render('createaccount');
 });
 
-router.get('/test', async (req, res) => {
-    res.render('stylingtest');
-});
 module.exports = router;
