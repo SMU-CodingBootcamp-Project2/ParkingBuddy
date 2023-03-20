@@ -19,7 +19,8 @@
         "car_model": "Camry",
         "car_color": "Yellow",
         "apartment_number": "101",
-        "lot_id": 1
+        "lot_id": 1,
+        "user_id": 1
       },
       {
         "first_name": "Jane",
@@ -29,7 +30,8 @@
         "car_model": "Accord",
         "car_color": "blue",
         "apartment_number": "102",
-        "lot_id": 1
+        "lot_id": 1,
+        "user_id": 2
       }
     ],
   
@@ -59,6 +61,7 @@
         "car_make": "VW",
         "car_model": "GTI",
         "car_color": "Blue",
+        "resident_id": "2",
         "resident_first_name": "John",
         "resident_last_name": "Doe"
       }
