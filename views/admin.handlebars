@@ -1,55 +1,37 @@
-
-    <nav class="navbar navbar-light navbar-expand-md py-3">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg class="bi bi-bezier" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
-                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-                    </svg></span><span><strong>Parking Buddy-Administrative Portal</strong></span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<nav class="navbar navbar-light navbar-expand-md py-3">
+        <div class="container mb-5"><img src="ParkingBuddy Logo.png" />
             <div id="navcol-2" class="float-right">
-                <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Contact Parking Buddy</a></li>
-                <li class="nav-item float-right"><a class="nav-link active" href="#">About Us</a></li>
-                <li class="nav-item">
+                <ul class="container float-right navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active float-right" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link active float-right" href="#">Contact ParkingBuddy</a></li>
+                <li class="nav-item"><a class="nav-link active float-right" href="#">About Us</a></li>
+                <li class="nav-item ml-2">
                   <form action="/api/users/logout" method="post">
-                    <button class="log-out" type="submit">Log-Out</button>
+                    <button class="btn btn-primary ms-md-2" id="logout" type="submit">Log-Out</button>
                   </form>
                 </li>
                 </ul>
             </div>
-
-            </div>
         </div>
     </nav>
   <section>
-    <h5>Parking Requests Pending Review/Approval</h5>
-    <div class="container border border-primary rounded col-md-4 float-left">
+    <div class="container flex border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="background: linear-gradient(rgba(0,123,255,0.2), rgba(0,123,255,0.2)), url('homepage - hero - parking graphic.avif') center / cover;height: 775px;">
+    <h3>Administrative Portal</h3>
+    <div class="container border border-primary d-inline bg-white">
+      <h5>Parking Requests Pending Review/Approval</h5>
+    
     <div class="row">
       <div class="col-md-12">
         
         <ul class="list-group">
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
-          <li class="list-group-item">Guest Spot Data Populated from GET</li>
+          <li class="list-group-item">No Pending Requests</li>
+          
         </ul>
       </div>
-        <div class="col-md-12"></div>
     </div>
     </div>
-    <div class="container mx-auto card-deck mt-3">
-  <div class="card col-sm-3">
+    <div class="container card-deck mt-3">
+  <div class="card col-sm-3 max: auto">
     <div class="card-body">
       <h5 class="card-title">View All Parking Details</h5>
       <p class="card-text">Pulls all relevant parking lot details, available and reserved</p>
@@ -71,27 +53,39 @@
     </div>
   </div>
 </div>
-<div>
-  <h3 class="container text-center">Search Results</h3>
-  <ul class="list-group">
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-          <li class="list-group-item">Data Populated from GET</li>
-        </ul>
+    </div>
+
+<h5 class="text text-center">Search Results</h5>
+<div class="container">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Spot#</th>
+      <th scope="col">Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>West</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>North</td>
+    </tr>
+   <tr>
+      <td>3</td>
+      <td>East</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>South</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+</div>
+
 </section>
 <footer class="text-center">
                 <div class="container text-muted py-4 py-lg-5">
