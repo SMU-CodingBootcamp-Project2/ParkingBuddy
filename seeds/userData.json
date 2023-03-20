@@ -12,8 +12,8 @@
   
     "residents": [
       {
-        "first_name": "John",
-        "last_name": "Doe",
+        "first_name": "Admin",
+        "last_name": "Istrator",
         "license_plate": "ABD123",
         "car_make": "Toyota",
         "car_model": "Camry",
@@ -24,7 +24,7 @@
       },
       {
         "first_name": "John",
-        "lasaddt_name": "Doe",
+        "last_name": "Doe",
         "license_plate": "ABC123",
         "car_make": "Toyota",
         "car_model": "Camry",
