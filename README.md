@@ -35,3 +35,13 @@ Application homepage is deployed live at the following link:
 [Documentation Name](link)
 
 [Bootstrap CSS Framework](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+Chris Baldock GitHub: [CBaldock2](https://github.com/CBaldock2)
+
+Chris Uffman GitHub: [anuffisenough](https://github.com/anuffisenough)
+
+Taylor Seal GitHub: [Sealcakes](https://github.com/Sealcakes)
+
+Chris Newell GitHub: [Arms-like-trees](https://github.com/Arms-like-trees)
+
+Rehan Jetpuri GitHub: [RehanJet](https://github.com/RehanJet)
