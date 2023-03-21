@@ -39,3 +39,37 @@ ParkingBuddy is deployed live through [Heroku](https://serene-cove-30368.herokua
 ## Credits
 
 [Bootstrap CSS Framework](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+[Bootstrap Studio](https://bootstrapstudio.io/)
+
+[Handlebars](https://handlebarsjs.com/)
+
+[Bcrypt](https://www.npmjs.com/package/bcrypt)
+
+[Connect-Flash](https://www.npmjs.com/package/connect-flash)
+
+[Connect-Session-Sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+
+[Express](https://expressjs.com/en/api.html)
+
+[Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
+
+[Express-Session](https://www.npmjs.com/package/express-session)
+
+[Mysql2](https://www.npmjs.com/package/mysql2)
+
+[Nodemon](https://www.npmjs.com/package/nodemon)
+
+[Sequelize](https://sequelize.org/)
+
+## Team Members
+
+[Christopher Baldock, GitHub Respository](https://github.com/CBaldock2)
+
+[Christopher Newell, GitHub Respository](https://github.com/Arms-like-trees)
+
+[Christopher Uffman, GitHub Respository](https://github.com/anuffisenough)
+
+[Rehan Jetpuri, GitHub Respository](https://github.com/RehanJet)
+
+[Taylor Seal, GitHub Respository](https://github.com/Sealcakes)
