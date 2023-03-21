@@ -1,8 +1,8 @@
-# Parking Buddy Application
+# ParkingBuddy Application
 
 ## Description
 
--The "Parking Buddy" application allows Users to store and manage parking lot information for their respective properties. As apartment residents, Users can create accounts which will store their personal and vehicle information, allow them to manage their own parking spot details, as well as submit requests for temporary parking permits for guest spots if available. As apartment administrators, Users can manage all resident information, review and update parking spot details, and approve or deny submitted requests for temporary parking permits. This application was made using Bootstrap for styling, <!--ADD ANY OTHER TECHNOLOGIES AND USAGES HERE, I will be sure to mention them specifically below>.
+-The "ParkingBuddy" application allows Users to store and manage parking lot information for their respective properties. As apartment residents, Users can create accounts which will store their personal and vehicle information, allow them to manage their own parking spot details, as well as submit requests for temporary parking permits for guest spots if available. As apartment administrators, Users can manage all resident information, review and update parking spot details, and approve or deny submitted requests for temporary parking permits. This application was made using Bootstrap for styling, <!--ADD ANY OTHER TECHNOLOGIES AND USAGES HERE, I will be sure to mention them specifically below>.
 
 -Upon landing at the homepage, both resident and administrative Users are greeted and prompted to log into their accounts. The "Log-In" button will direct them to the Log-In Page. 
 
@@ -35,3 +35,25 @@ Application homepage is deployed live at the following link:
 [Documentation Name](link)
 
 [Bootstrap CSS Framework](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+[Bootstrap Studio]
+
+[Handlebars]
+
+[Bcrypt]
+
+[Connect-Flash]
+
+[Connect-Session-Sequelize]
+
+[Express]
+
+[Express-Handlebars]
+
+[Express-Session]
+
+[Mysql2]
+
+[Nodemon]
+
+[Sequelize]
